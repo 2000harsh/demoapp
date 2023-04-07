@@ -1,0 +1,28 @@
+.style-table{
+    border-collapse: collapse;
+    margin: auto;
+    border: 3px solid blue;
+    font-size: 1.5em;
+}
+.style-table thead tr{
+    background-color: lightblue;
+    color: black;
+}
+
+.style-table thead tr th{
+    padding: 25px;
+}
+
+.style-table th,
+.style-table td{
+    border-bottom: 2px solid #f4f2f2;
+}
+
+.style-table tbody tr:last-of-type(even){
+    background-color: #f5a9a9;
+    color: wheat;
+}
+
+.style-table tbody tr:last-of-type{
+    border-bottom: 2px solid rgb(209, 39, 39);
+}

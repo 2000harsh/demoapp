@@ -1,0 +1,65 @@
+
+    .con {
+      /* margin-top: 100px; */
+      margin-top: 10%;
+      font-family: "Poppins";
+      text-align: left;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 139.5%;
+  
+      letter-spacing: -0.02em;
+  
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .title {
+        font-family: "Poppins";
+        text-align: left;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 62px;
+        line-height: 170%;
+        text-transform: capitalize;
+        color: #ffffff;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        
+      }
+
+      span {
+        color: #BC1823;
+      }
+
+      .getstarted {
+        float: left;
+        margin-top: 30px;
+        width: 220px;
+        height: 64px;
+        background: #BC1823;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.171);
+      }
+
+      .groupDiverse {
+        border-radius: 0 30px 30px 0px;
+        height: 500px;
+        width: 1200px;
+        margin-left: -300px;
+      }
+
+      .sent{
+        margin-right: 100px;
+        color: black;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 50%;
+    text-align: left;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.8);
+      }
