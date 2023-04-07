@@ -1,32 +1,11 @@
 import React from 'react';
-import smartcontract from './Contract.sol';
-import solc from 'solc';
-import fs from 'fs';
+import { useState } from 'react'
+import axios from 'axios';
+//import solc from 'solc';
+//import fs from 'fs';
 
 function Upload()
 {
-
-  function compileSolidityFile(smartcontract) 
-{
-  // Read the Solidity file contents
-    const input = fs.readFileSync(smartcontract, 'utf8');
-
-  // Compile the Solidity code using solc
-    const output = solc.compile(smartcontract, 1);
-
-  // Check for any errors during compilation
-    if (output.errors)
-    {
-      throw new Error(`Compilation error: ${output.errors[0]}`);
-    }
-
-  // Extract the compiled contract code
-    const Contract = Object.keys(output.contracts)[0];
-    const contractBytecode = output.contracts[`${Contract}`].bytecode;
-
-    return contractBytecode;
-}
-
   function Fileread(event) {
     var file = event.target.files[0];
     var reader = new FileReader();
@@ -37,17 +16,41 @@ function Upload()
     };
     reader.readAsText(file);
   }
+
+  const [apidata, setApidata] = useState([])
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+console.log("call")
+    try {
+      axios.get('http://192.168.29.69:3000/compile')
+      .then((response) => {
+        setApidata(response.data);
+        console.log(response.data);
+      }).catch((error)=>{
+        console.log(error)
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  
+  }
   
     return(
         <>
-        <form>
+        {/* <form> */}
         <div className="prfile_img text-center p-4">
                 <div className="flex flex-column justify-center align-items-center">
                    File: <input type="file" accept=".sol" onChange={Fileread}/><br/>
-                   <button className='btn btn-danger' type='submit' value='submit'>Submit</button>
+                   <button className='btn btn-danger' onClick={handleSubmit}>Submit</button>
+                </div>
+
+                <div className='data'>
+                  {/* Output:  */}
+                  {/* {apidata} */}
                 </div>
             </div>
-        </form>     
+        {/* </form>      */}
         </>      
     )
 }

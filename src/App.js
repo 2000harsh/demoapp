@@ -8,10 +8,13 @@ import Sidebar2 from './components/Sidebar2';
 import History from './components/History';
 import Registration from './components/Registration';
 import Landingpage from './components/Landingpage';
+import Metamask from './components/Metamask';
+import Metawallet from './components/Metawallet';
 import {BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom'
 
 
 function App() {
+
 
   // constproviderUrl = process.env.PROVIDER_URL;
 
@@ -20,7 +23,7 @@ function App() {
   // }, []);
 
   return (
-    <div className="App">   
+    <div className="App">  
 
     {/* <Routes>
       <Route>
@@ -30,6 +33,8 @@ function App() {
     </Routes>
   */}
       <Navbar/>
+      {/* <Metamask/> */}
+      {/* <Metawallet/> */}
       <Landingpage/>
       {/* <Sidebar/>
       <Sidebar2/> */}

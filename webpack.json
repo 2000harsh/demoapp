@@ -1,0 +1,14 @@
+import WorkerPlugin from 'worker-plugin';
+import nrwlConfig from '@nrwl/react/plugins/webpack.js';
+
+module.exports = (config, context) => {
+    nrwlConfig(config);
+    return {
+        ...config,
+        node: {
+            Buffer: true,
+            module: 'empty',
+        },
+        plugins: [new WorkerPlugin(), ...config.plugins],
+    };
+};

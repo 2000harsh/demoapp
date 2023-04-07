@@ -1,0 +1,8 @@
+const handleCompile = async () => {
+    setCompiling(true);
+    const result = await compileWithWorker({
+        content: SimpleStorageContact,
+    });
+    setCompileResult(result as string);
+    setCompiling(false);
+};
