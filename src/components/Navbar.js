@@ -63,7 +63,7 @@ const ChangeBtn =() =>{
       </a>
 
       <ul class="nav nav-pills">
-        <li className="nav-item1"><Link className='linkcls' to="/CardView"><a className="nav-link">App</a></Link></li>
+        <li className="nav-item1"><Link className='linkcls' to="/CardView"><a className="nav-link">Form</a></Link></li>
         <li class="nav-item1"><Link className='linkcls' to="/About"><a class="nav-link">About</a></Link></li>
         <li class="nav-item1" ><Link className='linkcls' to="/ProfilePage"><a class="nav-link">ProfilePage</a></Link></li>
         <li class="nav-item1" ><Link className='linkcls' to="/Registration"><a class="nav-link">Login</a></Link></li>
