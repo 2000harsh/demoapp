@@ -8,8 +8,7 @@ import Sidebar2 from './components/Sidebar2';
 import History from './components/History';
 import Registration from './components/Registration';
 import Landingpage from './components/Landingpage';
-import Metamask from './components/Metamask';
-import Metawallet from './components/Metawallet';
+import Home from './components/Home';
 import {BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom'
 
 
@@ -24,23 +23,12 @@ function App() {
 
   return (
     <div className="App">  
-
-    {/* <Routes>
-      <Route>
-        <Route exact path="/Read" element={<Form/>} />
-        <Route exact path="/Read" element={<Registration/>} />
-      </Route>
+  <Navbar/>
+    <Routes>
+      <Route index element={<Home/>}/>
     </Routes>
-  */}
-      <Navbar/>
-      {/* <Metamask/> */}
-      {/* <Metawallet/> */}
-      <Landingpage/>
-      {/* <Sidebar/>
-      <Sidebar2/> */}
-      {/* <History/> */}
-      <Footer/> 
-
+ 
+      
     </div>
   );
 }

@@ -32,7 +32,7 @@ function History(){
         <div>
             <center>
             <ButtonGroup size="lg" className="mb-2">
-                    <Link to="/CardView"><Button className="b1">Form </Button></Link>
+                    <Link to="/Cardform"><Button className="b1">Form </Button></Link>
                     <Link to="/History"><Button className="b2">History</Button></Link>
             </ButtonGroup>
         </center>

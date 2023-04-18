@@ -164,20 +164,5 @@ hr{
   border-radius: 0%;
  }
 
- .b1:hover{
-  background-color: white;
-  color: black;
- }
 
- .b2{
-  background-color: black;
-  color: white;
-  width:100px;
-  border-radius: 0%;
- }
-
- .b2:hover{
-  background-color: white;
-  color: black;
- }
  
