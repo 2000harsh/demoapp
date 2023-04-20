@@ -12,6 +12,7 @@ import History from './History';
 import Upload from './Upload';
 import logo2  from "./logo2.png";
 import Metawallet from "./Metawallet";
+import { useSelector } from 'react-redux';
 function Navbar() {
 
   const user = {
@@ -50,10 +51,10 @@ const ChangeBtn =() =>{
   }
 }
 
+const amount =  useSelector(state => state.amount)
 
   return (
     <>
-
 
 <div class="container" style={{position:'relative'}}>
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
@@ -63,8 +64,9 @@ const ChangeBtn =() =>{
       </a>
 
       <ul class="nav nav-pills">
+        <li className="nav-item1"><button className='btn btn-primary' disabled={true}>Your balance:{amount}</button></li>
         <li className="nav-item1"><Link className='linkcls' to="/Cardform"><a className="nav-link">App</a></Link></li>
-        <li class="nav-item1"><Link className='linkcls' to="/About"><a class="nav-link">About</a></Link></li>
+        {/* <li class="nav-item1"><Link className='linkcls' to="/About"><a class="nav-link">About</a></Link></li> */}
         <li class="nav-item1" ><Link className='linkcls' to="/ProfilePage"><a class="nav-link">ProfilePage</a></Link></li>
         <li class="nav-item1" ><Link className='linkcls' to="/Registration"><a class="nav-link">Login</a></Link></li>
         <li class="nav-item1" ><Link className='linkcls' to="/Upload"><a class="nav-link">Upload Contract</a></Link></li>

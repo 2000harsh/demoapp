@@ -9,6 +9,7 @@ import History from './components/History';
 import Registration from './components/Registration';
 import Landingpage from './components/Landingpage';
 import Home from './components/Home';
+import Shop from './components/Shop';
 import {BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom'
 
 
@@ -24,6 +25,7 @@ function App() {
   return (
     <div className="App">  
   <Navbar/>
+  <Shop/>
     <Routes>
       <Route index element={<Home/>}/>
     </Routes>
