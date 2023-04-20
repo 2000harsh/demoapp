@@ -17,3 +17,12 @@ export const withdrawMoney = (amount) => {
     }
 }
 
+export const changeColor = (color) => {
+    return (dispatch) => {
+        dispatch({
+            type: 'changeColor',
+            payload: color
+        })
+    }
+}
+

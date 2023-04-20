@@ -51,7 +51,7 @@ function Cardform()
                     </Tooltip>
                 </label>
                 <br/>
-                    <input type='text' className='inputfield'/>
+                    <input type='text' className='inputfield' placeholder='Token Name'/>
                 </div>
                 <div className='column'>
                     <label><b>Token Symbol</b>
@@ -61,18 +61,18 @@ function Cardform()
                         </IconButton>
                     </Tooltip>
                     </label><br/>
-                    <input type='text'className='inputfield'/>
+                    <input type='text'className='inputfield' placeholder='Token Symbol'/>
                 </div>
                 <div className='column'>
                 <input type="checkbox" id="multiwallet" name="multiwallet" value="True"/>
-                    <label><b>Transfer Ownership</b>
+                    <label className='titleCustmization'><b>Transfer Ownership</b>
                     <Tooltip title="Check if you want transfer ownership">
                         <IconButton>
                             <InfoIcon className='btnstyle'/>
                         </IconButton>
                     </Tooltip>
                     </label><br/>
-                    <input type='text'className='inputfield'/>
+                    <input type='text'className='inputfield' placeholder='Transfer Ownership'/>
                 </div>
 
 
@@ -84,7 +84,7 @@ function Cardform()
                         </IconButton>
                     </Tooltip>
                     </label><br/>
-                    <input type='number' className='inputfield'/>
+                    <input type='number' className='inputfield' placeholder='0.000'/>
                 </div>
                 <div className='column'>
                     <h2>Supply</h2>
@@ -92,14 +92,14 @@ function Cardform()
                 </div>
                 <div className='column'>
                 <input type="checkbox" id="multiwallet" name="multiwallet" value="True"/>
-                    <label><b>Token Price</b>
+                    <label className='titleCustmization'><b>Token Price</b>
                     <Tooltip title="Enter Your Tokrn-Price">
                         <IconButton>
                             <InfoIcon className='btnstyle'/>
                         </IconButton>
                     </Tooltip>
                     </label><br/>
-                    <input type='number' className='inputfield'/>
+                    <input type='number' className='inputfield' placeholder='Token Price'/>
                 </div>
 
 
@@ -155,7 +155,7 @@ function Cardform()
                         </IconButton>
                     </Tooltip>
                     </label><br/>
-                    <input type='number' className='inputfield'/>
+                    <input type='number' className='inputfield' placeholder='0'/>
                 </div>
                 <div className='column'>
                     <h2>Agreement</h2>
@@ -168,18 +168,18 @@ function Cardform()
                     <input type="checkbox"/>
                     <span class="slider round"></span>
                 </label>
-                <label>Burnable</label>
+                <label className='features'>Burnable</label>
                 <br/>
                 <label class="switch">
                     <input type="checkbox"/>
                     <span class="slider round"></span>
                 </label>
-                <label>Pausable</label>
+                <label className='features'>Pausable</label>
                 <br/> 
-                <input type="checkbox" id="recoverable" name="recoverable" value="True"/>
-                <label className='inputfieldcheckbox'>Recoverable</label><br/>
-                <input type="checkbox" id="verify_explorer" name="verify_explorer" value="True"/>
-                <label className='inputfieldcheckbox'>Verify Explorer</label><br/> 
+                <input type="checkbox" className='checkboxFeatures' id="recoverable" name="recoverable" value="True"/>
+                <label className='featurescheckbox'>Recoverable</label><br/>
+                <input type="checkbox" className='checkboxFeatures' id="verify_explorer" name="verify_explorer" value="True"/>
+                <label className='featurescheckbox'>Verified of Explorer</label><br/> 
                 </div>
                 <div className='column'>
                     <label><b>Maximum Supply</b>
@@ -189,11 +189,12 @@ function Cardform()
                         </IconButton>
                     </Tooltip>
                     </label><br/>
-                    <input type='number' className='inputfieldmax'/>
+                    <input type='number' className='inputfieldmax' placeholder='0'/>
                 </div>
                 <div className='column'>
                 <input type="checkbox" id="multiwallet" name="multiwallet" value="True"/>
-                    <label className='inputfieldcheckbox'>I Have read,understand and agree Terms of use</label><br/>   
+                    <label className='inputfieldcheckbox'>I Have read,understand and agree to Terms of use  </label><br/><br/> 
+                    <p className='peregraph'>Note: Please, fill the token information then lastly press the Confirm button.</p>  
                 </div>
 
                 
@@ -213,18 +214,20 @@ function Cardform()
                     <Button className='confirmbtn'>Confirm</Button>
                 </div>
 
-
-
                     <div className='column'>
                     
                     </div>
                 <div className='column'>
-                    <select name="supply" id="supply" className='inputfield' style={{marginBottom:"5%"}}>
+                    <select name="supply" id="supply" className='inputfield' style={{marginBottom:"10%"}}>
                         <option value="fixed">Binance Smart Chain Testnet</option>
                         <option value="mintable">Mintable</option>
                         <option value="xyz">xyz</option>
                     </select>
                 </div>
+                <div className='column'>
+
+                </div>
+
             </div>
         </Card>
         </center>
